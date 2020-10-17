@@ -9,3 +9,18 @@ sign_up_btn.addEventListener("click", () => {
 sign_in_btn.addEventListener("click", () => {
   container.classList.remove("sign-up-mode");
 });
+
+// SOCIAL PANEL JS
+const floating_btn = document.querySelector(".floating-btn");
+const close_btn = document.querySelector(".close-btn");
+const social_panel_container = document.querySelector(
+  ".social-panel-container"
+);
+
+floating_btn.addEventListener("click", () => {
+  social_panel_container.classList.toggle("visible");
+});
+
+close_btn.addEventListener("click", () => {
+  social_panel_container.classList.remove("visible");
+});

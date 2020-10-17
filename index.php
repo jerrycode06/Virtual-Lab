@@ -36,7 +36,13 @@ require_once "config.php";
 
 //-------------------------------------------------------------------------------------------------- Problem here
 
-$log_id = $_GET['id'];
+// $log_id = $_GET['id'];
+if(isset($_GET['id']))
+{
+    $log_id = $_GET['id'];
+}
+else
+$log_id = "";
 
 // Define variables and initialize with empty values for login
 $username = $password = "";
@@ -252,6 +258,8 @@ if ($log_id == 'login') {
     <title>Vlab</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/clean-blog.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script
       src="https://kit.fontawesome.com/64d58efce2.js"
@@ -274,12 +282,10 @@ if ($log_id == 'login') {
               <input type="password" placeholder="Password" name="password" />
               <span class="help-block"><?php echo $password_err; ?></span>
             </div>
-            <div class="input-field">
-                <select name="type" class="form-control">
+            <select name="type" class="input-field">
                     <option>Student</option>
                     <option>Teacher</option>
-                </select>
-            </div>
+            </select>
             <input type="submit" value="Login" class="btn solid" />
           </form>
           <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>?id=signup" method="post" class="sign-up-form">
@@ -303,12 +309,10 @@ if ($log_id == 'login') {
             <i class="fas fa-user"></i>
                 <input required type="text" name="name" placeholder="Name">
             </div>
-            <div class="input-field">
-                <select onchange="chan(this.value)" name="type" aria-placeholder="Type">
+            <select onchange="chan(this.value)" name="type" aria-placeholder="Type" class="input-field">
                     <option>Student</option>
                     <option>Teacher</option>
-                </select>
-            </div>
+            </select>
             <input type="submit" class="btn" value="Sign up" />
           </form>
         </div>
@@ -341,7 +345,24 @@ if ($log_id == 'login') {
         </div>
       </div>
 </div>
-    <?php include('footer.php') ?>
+<div class="social-panel-container">
+	<div class="social-panel">
+		<p>Created with <i class="fa fa-heart"></i> by
+		<button class="close-btn"><i class="fas fa-times"></i></button>
+		<h4>The ADC-Club,</h4>
+		<h4>Dept. of Computer Science, AMU</h4>
+	</div>
+</div>
+<footer class="footer">
+    <h2>About Us</h2>
+    <p>The Pathology V-Lab (Virtual laboratory) has been developed by students of <strong>The Area of Dominant Coders Club</strong> under the supervision of Dr. Swaleha Zubair, Department of Computer Science, AMU for the Department of Pathology, to provide The Students of Medicine with an online platform to practice routine laboratory experiments in a simulated environment.  
+It is not a replacement for a hands-on training setup, but has the purpose to provide an enhanced learning experience with ease of access. 
+We hope you enjoy using our Pathology V-Lab.
+</p>
+</footer>
+<button class="floating-btn">
+	Virtual Lab Team 
+</button>
     <script src="js/app.js"></script>
     <script>
         function chan(val) {

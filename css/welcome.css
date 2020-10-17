@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Home Section  */
+#home {
+  display: flex;
+  flex-direction: column;
+  padding: 3px 200px;
+  height: 580px;
+  margin: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+#home::before {
+  content: " ";
+  background-image: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),
+    url("../images/home-image.jpg");
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+#home h1 {
+  color: #9fbad6;
+  font-size: 4rem;
+  text-align: center;
+  font-family: "Muli";
+}
+
+#home h3 {
+  color: #fff;
+  text-align: center;
+  font-family: "Muli";
+}
+
+@media (max-width: 985px) {
+  #home {
+    height: 370px;
+    padding: 3px 28px;
+  }
+
+  #home::before {
+    width: 100%;
+  }
+
+  #home h1 {
+    font-size: 20px;
+  }
+  #home h3 {
+    font-size: 13px;
+  }
+}
+
+.test {
+  margin-top: 15rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #001f61;
+}
+
+.footer h2 {
+  margin: 20px 0;
+  color: #97a5ce;
+  font-family: "Muli";
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.footer p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 2px 17px 6px;
+  top: 0;
+  left: 50%;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}

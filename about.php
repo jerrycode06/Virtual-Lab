@@ -5,38 +5,42 @@
     <title>VLab</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?php 
-    include ("header.php")    
-    ?>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	
+	
+    <link href="css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/welcome.css">
 </head>
 
 <body>
-    <!--Add background color as per style -> style="background-color:#0b2e13"-->
-    <div class="jumbotron">
-        <h1>Virtual Lab</h1>
-      
-    </div>
-    <section class="my-5">
-        <div class="py-3">
-            <h1 class="text-center"></h1>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-12">
-                    <img src="Benedict Images/Virtual Labs.png" class="img-fluid aboutimg">
-                </div>
-                <div class="col-lg-6 col-md-6 col-12">
-                    <h2 class="display-4">Virtual Lab for performing Benedict's test</h2>
-                    <p class="py-5">A web- based application for performing the Benedict test ( Benedict’s test is utilized to test for carbohydrates and non-reducing or reducing sugar and its answer can be utilized to test for the presence of glucose in urine). Since, in the lockdown conditions schools and colleges are closed, doing experiment in the physical labs is not possible these days. As a teacher demonstrating experiment to the students via online mode becomes difficult as well as for the students to learn.
-                    So, our virtual lab simulates an environment to conduct expermients for students.</p>
-                    <a href="welcome.php" class="btn btn-success">Back</a>
-                </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand">Virtual Lab</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="welcome.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.php">About</a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
+    <section id="home">
+        <h1>About Virtual Lab</h1>			
+	<h3 style="color: #fff;">The Pathology E lab has been developed to provide MBBS students with an online platform to practice   routine laboratory experiments in a simulated environment.  Although it is not a repacement for hands -on training, the purpose is to provide an enhanced learning experience with ease of access. We hope you enjoy using the Pathology E -lab.</h3>
     </section>
-    <?php 
-include ("footer.php")    
-?>
 </body>
 
 </html>
