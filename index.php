@@ -348,7 +348,6 @@ if ($log_id == 'login') {
 <div class="social-panel-container">
 	<div class="social-panel">
 		<p>Created with <i class="fa fa-heart"></i> by
-		<button class="close-btn"><i class="fas fa-times"></i></button>
 		<h4>The ADC-Club,</h4>
 		<h4>Dept. of Computer Science, AMU</h4>
 	</div>

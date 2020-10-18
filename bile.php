@@ -112,7 +112,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
     <section class="test">
         <div class="py-3">
-            <h1 class="text-center">Benedict's test for reducing sugars</h1>
+            <h1 class="text-center">Test for Bile Salts in Urine</h1>
         </div>
         <div class="container">
             <div class="row">
@@ -144,8 +144,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 						<label>What you think will be our first step ?</label>
 						<select  onchange="first(this.value)" class="form-control">
 							<option>Select Answer</option>
-							<option value="a1">Take 5ml of benedict's solution into test tube.</option>
-							<option value="a2">Take 5ml of urine sample into test tube.</option>
+							<option value="a1">Take sodium nitroprusside solution in a test tube.</option>
+							<option value="a2">Take 5ml urine in a test tube.</option>
 						</select>
 						</div>
 					</div>
@@ -154,34 +154,23 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 						<label>Next step (2) ?</label>
 						<select  onchange="second(this.value)" class="form-control">
 							<option>Select Answer</option>
-							<option value="a1">Add Urine Sample first and then Benedicts Reagent is heated to see for priot colour change which indicates contamination or substandard reagent.</option>
-							<option value="a2">Benedicts reagent is first heated to see for prior colour change which indicates contamination or substandard reagent and then Add Urine Sample.</option>
+							<option value="a1">Sprinkle sulphur powder on the surface.</option>
+							<option value="a2">Vigorously shake to dissolve the sulphur in the sample.</option>
 						</select>
 						</div>
 					</div>
 					<div id="3" style="display:none" >
 						<div  class="form-group">
 						<label>Next step(3) ?</label>
-						<textarea cols="6" rows="3" id="txt1" placeholder="what will we do now?" class="form-control"> </textarea>
+						<select  onchange="third(this.value)" class="form-control">
+							<option>Select Answer</option>
+							<option value="a1">Watch if granules sink or remain on surface</option>
+							<option value="a2">Heat the tube</option>
+						</select>
 						</div>
-						<span onclick="third()" class="btn btn-primary">Submit</span>
 					</div>
-					<div id="4" style="display:none" >
-						<div  class="form-group">
-						<label>Next step(4) ?</label>
-						<textarea cols="6" rows="3" id="txt2" placeholder="what will we do now?" class="form-control"> </textarea>
-						</div>
-						<span onclick="fourth()" class="btn btn-primary">Submit</span>
-					</div>
-					<div id="5" style="display:none" >
-						<div  class="form-group">
-						<label>Next step(5) ?</label>
-						<textarea cols="6" rows="3" id="txt3" placeholder="what will we do now?" class="form-control"> </textarea>
-						</div>
-						<span onclick="fifth()" class="btn btn-primary">Submit</span>
-					</div>
-					<div id="6" style="display:none" >
-						<button id="btnShowPopup2">Click for More about color of solution</button>
+                    <div id="4" style="display:none" >
+                    <button id="btnShowPopup2" onclick="fifth()">Click for More about result of solution</button>
 						<form style="margin-top:7px" action="result.php" method="post" onsubmit="return vald()">
 						    <div id="popres">
 						    </div>
@@ -195,25 +184,17 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   					<div class="modal-dialog modal-dialog-scrollable">
     					<div class="modal-content">
       						<div class="modal-header">
-        						<h5 class="modal-title" id="staticBackdropLabel">About Benedict's Test</h5>
+        						<h5 class="modal-title" id="staticBackdropLabel">About Test for Bile Salts</h5>
         						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           							<span aria-hidden="true">&times;</span>
         						</button>
       						</div>
       						<div class="modal-body">
-						 			<p>The Benedict’s test is a qualitative and semi-quantitative method to test for the presence of reducing sugars in a random urine sample or other solution. It detects and partly quantifies the amount present according to the degree of colour change.</p>
+						 			<p>Hay’s Test or Sulphur flower test is a qualitative test which detects the presence of bile salts in urine. There are two main types of bile acids which are synthesized in theliver. These are Cholic acid and chenodeoxycholic acid. These are then conjugated with glycine or taurine molecules to form bile salts. </p>
+						 			<p>Bile salts are excreted in urine in increased amounts in hepatocellular and obstructive jaundice. </p>
 						 			<p><strong>Principle -</strong></p>
-						 			<p>It is based on the principle that on heating in presence of an alkali (sodium carbonate), reducing sugars are converted to enediols which are strong reducing agents. These then convert the cupric ions in copper sulphate to cuprous ions . An insoluble reddish precipitate of cuprous oxide Is formed and the degree of colour of the precipitate/solution is dependent on the amount of reducing sugar in the analyte.The sodium citrate in the reagent acts as a complexing agent which keeps the copper ions in solution.
-										Benedicts solution contains anhydrous sodium carbonate, sodium citrate and copper (2) sulphate pentahydrate.</p>
-						 			<p><strong>The Color change and the corresponding quantities of reducing sugar -</strong></p>
-						 			<ul>
-						  				<li>Blue - Negative </li>
-						 			 	<li>Green - 0.5 to 1gm </li>
-						  				<li>Green/yellow - 1 to 1.5gm%</li>
-						  				<li>Orange - 1.5 to 2 gm% </li>
-						  				<li>Brick red - more than 2gm%</li>
-						 			</ul>
-									<img src = "Benedict Images/ben2.jpg"/>
+						 			<p>Hay’s sulphur flower test is a qualitative test.It tests for the presence or absence of bile slats in a urine sample by the change in surface tension when sulphur granules are sprinkled over the surface of the sample. Bile salts lower the surface tension of the urine even in small concentrations.</p>
+									<img src = "Benedict Images/bile-salt.jpg"/>
       						</div>
       						<div class="modal-footer">
         						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -245,22 +226,20 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 				<!-- Model Ends -->
 					
 				<div class="col-md-6 h3" id="hint1"  style="font-family:arial;padding:10px;">
-					<button data-toggle="modal" data-target="#staticBackdrop" class="btn btn-primary">Click to know about Benedict's solution</button>
+					<button data-toggle="modal" data-target="#staticBackdrop" class="btn btn-primary">Click to know about Rothera’s Test</button>
 				</div>
 				<div class="col-md-6 h3" id="hint2"  style="font-family:arial;padding:10px;display:none">
-					See above we have taken 5ml of Benedict's solution in test tube
+					See above we have taken 5ml urine in a tube. 
 				</div>
 				<div class="col-md-6 h3" id="hint3"  style="font-family:arial;padding:10px;display:none">
-					See above we have taken 8 drops amount of urine sample in the same test tube
+                    We Add sulphur powder over the surface. 
 				</div>
 				<div class="col-md-6 h3" id="hint4"  style="font-family:arial;padding:10px;display:none">
-					See above we have  lit flame
+                    Observe to see if granules sink or stay on the surface
 				</div>
 				<div class="col-md-6 h3" id="hint5"  style="font-family:arial;padding:10px;display:none">
-					See above placed test tube over flame
-				</div>
-				<div class="col-md-6 h3" id="hint6"  style="font-family:arial;padding:10px;display:none">
-					See the color of solution in test tube has changed to green which means urine sample has Traceable amount of sugar
+                If the granules sink due to loss of surface tension –Positive for bile salts
+                    If granules remain on the surface --- Negative for bile salts
 				</div>
 			
 			</div>
@@ -287,7 +266,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 						    <th>Step 2</th>
 						    <th>Step 3</th> 
 						    <th>Step 4</th>
-						    <th>Step 5</th> 
+						    <th>Step 5</th>
 					        </thead>
 					        <tbody>
 					            <?php
@@ -366,15 +345,15 @@ We hope you enjoy using our Pathology V-Lab.
 			d2=document.getElementById("2");
 			h2=document.getElementById("hint2");
 			h1=document.getElementById("hint1");
-			if(val=="a1")
+			if(val=="a2")
 			{
-				alert("Correct Answer to start with we take 5ml of benedict's solution in test tube");
+				alert("Correct Answer to Fill 5 ml given sample of urine in test tube");
 				if(f1==0)
 				{
 				res[0]="right";
 				f1=1;
 				}
-				img.setAttribute("src","Benedict Images/2.png");
+				img.setAttribute("src","Benedict Images/test-image5.jpg");
 				document.getElementById("loading").setAttribute("style","display:block");
 				d1.setAttribute("style","display:none");
 				d2.setAttribute("style","display:block");
@@ -388,7 +367,7 @@ We hope you enjoy using our Pathology V-Lab.
 			    res[0]="wrong";
 			    f1=1;
 			    }
-				alert("Wrong Answer to start with we take 5ml of benedict's solution in test tube, Choose correct again");
+				alert("Wrong Answer to Take sodium nitroprusside in a test tube, Choose correct again.");
 			}
 		}
 		function second(val)
@@ -398,15 +377,15 @@ We hope you enjoy using our Pathology V-Lab.
 			d3=document.getElementById("3");
 			h2=document.getElementById("hint2");
 			h3=document.getElementById("hint3");
-			if(val=="a2")
+			if(val=="a1")
 			{
-				alert("Correct Answer now We should take Benedicts reagent first - heated to see for prior colour change which indicates contamination or substandard reagent and then Add Urine Sample.");
+				alert("Correct Answer, We Add sulphur powder over the surface.");
 				if(f2==0)
 				{
 				res[1]="right";
 				f2=1;
 				}
-				img.setAttribute("src","Benedict Images/5.png");
+				img.setAttribute("src","Benedict Images/test-image4.jpg");
 				document.getElementById("loading").setAttribute("style","display:block");
 				d2.setAttribute("style","display:none");
 				d3.setAttribute("style","display:block");
@@ -420,67 +399,59 @@ We hope you enjoy using our Pathology V-Lab.
 			    res[1]="wrong";
 			    f2=1;
 			    }
-				alert("Wrong Answer now We should take Benedicts reagent first - heated to see for prior colour change which indicates contamination or substandard reagent and then Add Urine Sample, Choose correct again");
+				alert("Wrong Answer Vigorously shake to dissolve the sulphur in the sample");
 			}
 		}
-		function third()
+		function third(val)
 		{
 			img=document.getElementById("imgmain");
 			d4=document.getElementById("4");
 			d3=document.getElementById("3");
 			h4=document.getElementById("hint4");
 			h3=document.getElementById("hint3");
-			res[2]=document.getElementById("txt1").value;
-				alert("Now, We should have taken 8 drops amount of urine sample in the same test tube");
-				img.setAttribute("src","Benedict Images/6.png");
+			if(val=="a1")
+			{
+				alert("Correct Answer Observe to see if granules sink or stay on the surface.");
+				if(f2==0)
+				{
+				res[1]="right";
+				f2=1;
+				}
+				img.setAttribute("src","Benedict Images/bile-salt.jpg");
 				document.getElementById("loading").setAttribute("style","display:block");
 				d3.setAttribute("style","display:none");
 				d4.setAttribute("style","display:block");
-				h4.setAttribute("style","font-family:arial;padding:10px;display:block");
 				h3.setAttribute("style","font-family:arial;padding:10px;display:none");
-			
+				h4.setAttribute("style","font-family:arial;padding:10px;display:block");
+			}
+			else
+			{
+			    if(f2==0)
+			    {
+			    res[1]="wrong";
+			    f2=1;
+			    }
+				alert("Heat the tube ");
+			}
 			
 		}
-		function fourth()
+        function fifth()
 		{
 			img=document.getElementById("imgmain");
 			d4=document.getElementById("4");
-			d5=document.getElementById("5");
-			h4=document.getElementById("hint4");
 			h5=document.getElementById("hint5");
-			res[3]=document.getElementById("txt2").value;
-				alert("Heat the mixture carefully on spirit lamp/Bunsen burner and Wait for colour change without heating");
-				img.setAttribute("src","Benedict Images/7.png");
+				alert("if the granules sink due to loss of surface tension –Positive for bile salts If granules remain on the surface --- Negative for bile salts");
+				img.setAttribute("src","Benedict Images/bile-salt.jpg");
 				document.getElementById("loading").setAttribute("style","display:block");
-				d5.setAttribute("style","display:block");
-				d4.setAttribute("style","display:none");
-				h4.setAttribute("style","font-family:arial;padding:10px;display:none");
+				d4.setAttribute("style","display:block");
 				h5.setAttribute("style","font-family:arial;padding:10px;display:block");
-			
-			
-		}
-		function fifth()
-		{
-			img=document.getElementById("imgmain");
-			d6=document.getElementById("6");
-			d5=document.getElementById("5");
-			h6=document.getElementById("hint6");
-			h5=document.getElementById("hint5");
-			res[4]=document.getElementById("txt3").value;
-				alert("If you got color then Put test tube in cold water or wait for color change on heating, color of solution in test tube will be changed depeding upon the concentration of sugar in urine sample");
-				img.setAttribute("src","Benedict Images/8.png");
-				document.getElementById("loading").setAttribute("style","display:block");
-				d5.setAttribute("style","display:none");
-				d6.setAttribute("style","display:block");
-				h5.setAttribute("style","font-family:arial;padding:10px;display:none");
-				h6.setAttribute("style","font-family:arial;padding:10px;display:block");
 		}
 	</script>
 	<script type="text/javascript">
 	$(function () {
         $("#btnShowPopup2").click(function () {
            
-            var body = "<img src='Benedict Images/ben2.jpg' class='img-fluid pb-4'>";
+            var body = "<img src='Benedict Images/bile-salt.jpg' class='img-fluid pb-4'>";
 
             
             $("#MyPopup2 .modal-body").html(body);

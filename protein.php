@@ -112,7 +112,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
     <section class="test">
         <div class="py-3">
-            <h1 class="text-center">Benedict's test for reducing sugars</h1>
+            <h1 class="text-center">Heat Coagulation Test for Proteins in Urine</h1>
         </div>
         <div class="container">
             <div class="row">
@@ -144,8 +144,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 						<label>What you think will be our first step ?</label>
 						<select  onchange="first(this.value)" class="form-control">
 							<option>Select Answer</option>
-							<option value="a1">Take 5ml of benedict's solution into test tube.</option>
-							<option value="a2">Take 5ml of urine sample into test tube.</option>
+							<option value="a1">Fill 3/4th of test tube with urine.</option>
+							<option value="a2">Take 5ml urine in a test tube.</option>
 						</select>
 						</div>
 					</div>
@@ -154,34 +154,33 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 						<label>Next step (2) ?</label>
 						<select  onchange="second(this.value)" class="form-control">
 							<option>Select Answer</option>
-							<option value="a1">Add Urine Sample first and then Benedicts Reagent is heated to see for priot colour change which indicates contamination or substandard reagent.</option>
-							<option value="a2">Benedicts reagent is first heated to see for prior colour change which indicates contamination or substandard reagent and then Add Urine Sample.</option>
+							<option value="a1">Heat the tube from the bottom and observe for precipitation.</option>
+							<option value="a2">Heat the upper part of the sample and observe for precipitation.</option>
 						</select>
 						</div>
 					</div>
 					<div id="3" style="display:none" >
 						<div  class="form-group">
 						<label>Next step(3) ?</label>
-						<textarea cols="6" rows="3" id="txt1" placeholder="what will we do now?" class="form-control"> </textarea>
+						<select  onchange="third(this.value)" class="form-control">
+							<option>Select Answer</option>
+							<option value="a1">Add few drops of water and see for change in extent of precipitation.</option>
+							<option value="a2">Add few drops of acetic acid and see for change in degree of turbidity.</option>
+						</select>
 						</div>
-						<span onclick="third()" class="btn btn-primary">Submit</span>
 					</div>
 					<div id="4" style="display:none" >
 						<div  class="form-group">
 						<label>Next step(4) ?</label>
-						<textarea cols="6" rows="3" id="txt2" placeholder="what will we do now?" class="form-control"> </textarea>
+						<select  onchange="fourth(this.value)" class="form-control">
+							<option>Select Answer</option>
+							<option value="a1">Place tube against black /dark background to assess precipitation.</option>
+							<option value="a2">Hold tube up in bright light to observe for precipitation.</option>
+						</select>
 						</div>
-						<span onclick="fourth()" class="btn btn-primary">Submit</span>
 					</div>
 					<div id="5" style="display:none" >
-						<div  class="form-group">
-						<label>Next step(5) ?</label>
-						<textarea cols="6" rows="3" id="txt3" placeholder="what will we do now?" class="form-control"> </textarea>
-						</div>
-						<span onclick="fifth()" class="btn btn-primary">Submit</span>
-					</div>
-					<div id="6" style="display:none" >
-						<button id="btnShowPopup2">Click for More about color of solution</button>
+					<button id="btnShowPopup2">Click for More about the Solution.</button>
 						<form style="margin-top:7px" action="result.php" method="post" onsubmit="return vald()">
 						    <div id="popres">
 						    </div>
@@ -195,25 +194,27 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   					<div class="modal-dialog modal-dialog-scrollable">
     					<div class="modal-content">
       						<div class="modal-header">
-        						<h5 class="modal-title" id="staticBackdropLabel">About Benedict's Test</h5>
+        						<h5 class="modal-title" id="staticBackdropLabel">About Heat Coagulation Test for Proteins</h5>
         						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           							<span aria-hidden="true">&times;</span>
         						</button>
       						</div>
       						<div class="modal-body">
-						 			<p>The Benedict’s test is a qualitative and semi-quantitative method to test for the presence of reducing sugars in a random urine sample or other solution. It detects and partly quantifies the amount present according to the degree of colour change.</p>
+						 			<p>The Heat Coagulation or heat and acetic acid test is a simple test which detects the presence of protein, mainly albumin, in urine. It can be done on a random urine sample. It is a qualitative and semi- quantitative test as the amount of protein can be graded according to the degree of cloudiness or turbidity produced. </p>
 						 			<p><strong>Principle -</strong></p>
-						 			<p>It is based on the principle that on heating in presence of an alkali (sodium carbonate), reducing sugars are converted to enediols which are strong reducing agents. These then convert the cupric ions in copper sulphate to cuprous ions . An insoluble reddish precipitate of cuprous oxide Is formed and the degree of colour of the precipitate/solution is dependent on the amount of reducing sugar in the analyte.The sodium citrate in the reagent acts as a complexing agent which keeps the copper ions in solution.
-										Benedicts solution contains anhydrous sodium carbonate, sodium citrate and copper (2) sulphate pentahydrate.</p>
-						 			<p><strong>The Color change and the corresponding quantities of reducing sugar -</strong></p>
-						 			<ul>
-						  				<li>Blue - Negative </li>
-						 			 	<li>Green - 0.5 to 1gm </li>
-						  				<li>Green/yellow - 1 to 1.5gm%</li>
-						  				<li>Orange - 1.5 to 2 gm% </li>
-						  				<li>Brick red - more than 2gm%</li>
-						 			</ul>
-									<img src = "Benedict Images/ben2.jpg"/>
+						 			<p>When a sample of urine containing dissolved proteins in excess of the normal is heated, these proteins coagulate and form a precipitate which leads to haziness or cloudiness of the solution. The precipitation is further enhanced on adding acetic acid which acidifies the solution and brings the proteins closer to their isoelectric point. Metaproteins which may form and remain in solution in alkaline medium are also detected in the acidic medium. Acetic acid also serves to dissolve phosphates and carbonates in the sample, which may act as a source of false positive turbidity.</p>
+									<img src = "Benedict Images/Picture4.jpg"/>
+									<img src = "Benedict Images/Picture5.jpg"/>
+									<p>Now we have different types of precipitate so we grade the amount of protein according to it.</p>
+                    <ul>
+                        <li>No cloudiness - Negative</li>
+                        <li>Slight cloudiness visible against dark surface - 1+ (50 mg/dl)</li>
+                        <li>Granular precipitate - 2+ (50-250 mg/dl)</li>
+                        <li>Floccular precipitate - 3+ (250-500 mg/dl)</li>
+                        <li>Curdy thick clumps of precipitate - 4+ (500-1000 mg/dl)</li>
+                        <li>Distinct cloudiness - 2+</li>
+                        <li>Thick clumpy precipitate - 4+</li>
+                    </ul>
       						</div>
       						<div class="modal-footer">
         						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -245,22 +246,31 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 				<!-- Model Ends -->
 					
 				<div class="col-md-6 h3" id="hint1"  style="font-family:arial;padding:10px;">
-					<button data-toggle="modal" data-target="#staticBackdrop" class="btn btn-primary">Click to know about Benedict's solution</button>
+					<button data-toggle="modal" data-target="#staticBackdrop" class="btn btn-primary">Click to know about Heat Coagulation Test</button>
 				</div>
 				<div class="col-md-6 h3" id="hint2"  style="font-family:arial;padding:10px;display:none">
-					See above we have taken 5ml of Benedict's solution in test tube
+					See above we have taken 3/4th of a test tube with given sample of urine
 				</div>
 				<div class="col-md-6 h3" id="hint3"  style="font-family:arial;padding:10px;display:none">
-					See above we have taken 8 drops amount of urine sample in the same test tube
+					See above we are Heating the upper part of the sample 
 				</div>
 				<div class="col-md-6 h3" id="hint4"  style="font-family:arial;padding:10px;display:none">
-					See above we have  lit flame
+					See above we have added few drops of acetic acid and now observe for change in cloudiness (increase or decrease)
 				</div>
 				<div class="col-md-6 h3" id="hint5"  style="font-family:arial;padding:10px;display:none">
-					See above placed test tube over flame
+					See above, now we see for extent of precipitation by holding tube against dark surface or paper
 				</div>
 				<div class="col-md-6 h3" id="hint6"  style="font-family:arial;padding:10px;display:none">
-					See the color of solution in test tube has changed to green which means urine sample has Traceable amount of sugar
+                    Now we have different types of precipitate so we grade the amount of protein according to it.
+                    <ul>
+                        <li>No cloudiness - Negative</li>
+                        <li>Slight cloudiness visible against dark surface - 1+ (50 mg/dl)</li>
+                        <li>Granular precipitate - 2+ (50-250 mg/dl)</li>
+                        <li>Floccular precipitate - 3+ (250-500 mg/dl)</li>
+                        <li>Curdy thick clumps of precipitate - 4+ (500-1000 mg/dl)</li>
+                        <li>Distinct cloudiness - 2+</li>
+                        <li>Thick clumpy precipitate - 4+</li>
+                    </ul>
 				</div>
 			
 			</div>
@@ -286,8 +296,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 						    <th>Step 1</th>
 						    <th>Step 2</th>
 						    <th>Step 3</th> 
-						    <th>Step 4</th>
-						    <th>Step 5</th> 
+						    <th>Step 4</th> 
 					        </thead>
 					        <tbody>
 					            <?php
@@ -368,13 +377,13 @@ We hope you enjoy using our Pathology V-Lab.
 			h1=document.getElementById("hint1");
 			if(val=="a1")
 			{
-				alert("Correct Answer to start with we take 5ml of benedict's solution in test tube");
+				alert("Correct Answer to Fill 3/4th of a test tube with given sample of urine");
 				if(f1==0)
 				{
 				res[0]="right";
 				f1=1;
 				}
-				img.setAttribute("src","Benedict Images/2.png");
+				img.setAttribute("src","Benedict Images/test-image2.jpg");
 				document.getElementById("loading").setAttribute("style","display:block");
 				d1.setAttribute("style","display:none");
 				d2.setAttribute("style","display:block");
@@ -388,7 +397,7 @@ We hope you enjoy using our Pathology V-Lab.
 			    res[0]="wrong";
 			    f1=1;
 			    }
-				alert("Wrong Answer to start with we take 5ml of benedict's solution in test tube, Choose correct again");
+				alert("Wrong Answer to Take 5ml urine in a test tube, Choose correct again.");
 			}
 		}
 		function second(val)
@@ -400,13 +409,13 @@ We hope you enjoy using our Pathology V-Lab.
 			h3=document.getElementById("hint3");
 			if(val=="a2")
 			{
-				alert("Correct Answer now We should take Benedicts reagent first - heated to see for prior colour change which indicates contamination or substandard reagent and then Add Urine Sample.");
+				alert("Correct Answer Heating the upper part of the sample enables comparision of change in appearance with the lower part of the sample which remains clear.");
 				if(f2==0)
 				{
 				res[1]="right";
 				f2=1;
 				}
-				img.setAttribute("src","Benedict Images/5.png");
+				img.setAttribute("src","Benedict Images/test-image6.png");
 				document.getElementById("loading").setAttribute("style","display:block");
 				d2.setAttribute("style","display:none");
 				d3.setAttribute("style","display:block");
@@ -420,67 +429,92 @@ We hope you enjoy using our Pathology V-Lab.
 			    res[1]="wrong";
 			    f2=1;
 			    }
-				alert("Wrong Answer now We should take Benedicts reagent first - heated to see for prior colour change which indicates contamination or substandard reagent and then Add Urine Sample, Choose correct again");
+				alert("Wrong Answer Heat the tube from the bottom and observe for precipitation, Choose correct again");
 			}
 		}
-		function third()
+		function third(val)
 		{
 			img=document.getElementById("imgmain");
 			d4=document.getElementById("4");
 			d3=document.getElementById("3");
 			h4=document.getElementById("hint4");
 			h3=document.getElementById("hint3");
-			res[2]=document.getElementById("txt1").value;
-				alert("Now, We should have taken 8 drops amount of urine sample in the same test tube");
-				img.setAttribute("src","Benedict Images/6.png");
+			if(val=="a2")
+			{
+				alert("Correct Answer addition of acetic acid facilitates further precipitation of proteins by bringing them closer to their isoelectric point a an acidic pH and  enables detection of metaproteins which are soluble in an alkaline medium. It also dissolves any phosphates or carbonates in the sample which may cause false positive cloudiness.");
+				if(f2==0)
+				{
+				res[1]="right";
+				f2=1;
+				}
+				img.setAttribute("src","Benedict Images/test-image5.jpg");
 				document.getElementById("loading").setAttribute("style","display:block");
 				d3.setAttribute("style","display:none");
 				d4.setAttribute("style","display:block");
-				h4.setAttribute("style","font-family:arial;padding:10px;display:block");
 				h3.setAttribute("style","font-family:arial;padding:10px;display:none");
-			
+				h4.setAttribute("style","font-family:arial;padding:10px;display:block");
+			}
+			else
+			{
+			    if(f2==0)
+			    {
+			    res[1]="wrong";
+			    f2=1;
+			    }
+				alert("Wrong Answer Add few drops of water and see for change in extent of precipitation, Choose correct again");
+			}
 			
 		}
-		function fourth()
+		function fourth(val)
 		{
 			img=document.getElementById("imgmain");
 			d4=document.getElementById("4");
 			d5=document.getElementById("5");
 			h4=document.getElementById("hint4");
 			h5=document.getElementById("hint5");
-			res[3]=document.getElementById("txt2").value;
-				alert("Heat the mixture carefully on spirit lamp/Bunsen burner and Wait for colour change without heating");
-				img.setAttribute("src","Benedict Images/7.png");
+			if(val=="a1")
+			{
+				alert("Correct Answer we see for extent of precipitation by holding tube against dark surface or paper.");
+				if(f2==0)
+				{
+				res[1]="right";
+				f2=1;
+				}
+				img.setAttribute("src","Benedict Images/protein-final.jpg");
 				document.getElementById("loading").setAttribute("style","display:block");
-				d5.setAttribute("style","display:block");
 				d4.setAttribute("style","display:none");
+				d5.setAttribute("style","display:block");
 				h4.setAttribute("style","font-family:arial;padding:10px;display:none");
 				h5.setAttribute("style","font-family:arial;padding:10px;display:block");
-			
-			
+			}
+			else
+			{
+			    if(f2==0)
+			    {
+			    res[1]="wrong";
+			    f2=1;
+			    }
+				alert("Wrong Answer Hold tube up in bright light to observe for precipitation.");
+			}
 		}
-		function fifth()
+        function fifth()
 		{
 			img=document.getElementById("imgmain");
-			d6=document.getElementById("6");
 			d5=document.getElementById("5");
 			h6=document.getElementById("hint6");
 			h5=document.getElementById("hint5");
-			res[4]=document.getElementById("txt3").value;
-				alert("If you got color then Put test tube in cold water or wait for color change on heating, color of solution in test tube will be changed depeding upon the concentration of sugar in urine sample");
-				img.setAttribute("src","Benedict Images/8.png");
-				document.getElementById("loading").setAttribute("style","display:block");
-				d5.setAttribute("style","display:none");
-				d6.setAttribute("style","display:block");
-				h5.setAttribute("style","font-family:arial;padding:10px;display:none");
-				h6.setAttribute("style","font-family:arial;padding:10px;display:block");
+			alert("we grade the amount of protein present according to type of precipitate");
+			img.setAttribute("src","Benedict Images/protein-final.png");
+			document.getElementById("loading").setAttribute("style","display:block");
+			d5.setAttribute("style","display:block");
+			h6.setAttribute("style","font-family:arial;padding:10px;display:block");
 		}
 	</script>
 	<script type="text/javascript">
 	$(function () {
         $("#btnShowPopup2").click(function () {
            
-            var body = "<img src='Benedict Images/ben2.jpg' class='img-fluid pb-4'>";
+            var body = "<img src='Benedict Images/protein-final.jpg' class='img-fluid pb-4'>";
 
             
             $("#MyPopup2 .modal-body").html(body);
