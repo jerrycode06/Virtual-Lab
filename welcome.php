@@ -162,26 +162,25 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 					<div id="3" style="display:none" >
 						<div  class="form-group">
 						<label>Next step(3) ?</label>
-						<textarea cols="6" rows="3" id="txt1" placeholder="what will we do now?" class="form-control"> </textarea>
+						<select  onchange="third(this.value)" class="form-control">
+							<option>Select Answer</option>
+							<option value="a1">Add 5ml of urine to benedict’s reagent.</option>
+							<option value="a2">Add 8drops of urine to  benedicts’ reagent.</option>
+						</select>
 						</div>
-						<span onclick="third()" class="btn btn-primary">Submit</span>
 					</div>
 					<div id="4" style="display:none" >
 						<div  class="form-group">
 						<label>Next step(4) ?</label>
-						<textarea cols="6" rows="3" id="txt2" placeholder="what will we do now?" class="form-control"> </textarea>
+						<select  onchange="fourth(this.value)" class="form-control">
+							<option>Select Answer</option>
+							<option value="a1">Heat the solution.</option>
+							<option value="a2">Wait for colour change without heating.</option>
+						</select>
 						</div>
-						<span onclick="fourth()" class="btn btn-primary">Submit</span>
 					</div>
 					<div id="5" style="display:none" >
-						<div  class="form-group">
-						<label>Next step(5) ?</label>
-						<textarea cols="6" rows="3" id="txt3" placeholder="what will we do now?" class="form-control"> </textarea>
-						</div>
-						<span onclick="fifth()" class="btn btn-primary">Submit</span>
-					</div>
-					<div id="6" style="display:none" >
-						<button id="btnShowPopup2">Click for More about color of solution</button>
+						<button data-toggle="modal" data-target="#modal2" class="btn btn-primary">Click for More about color of solution</button>
 						<form style="margin-top:7px" action="result.php" method="post" onsubmit="return vald()">
 						    <div id="popres">
 						    </div>
@@ -205,7 +204,26 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 						 			<p><strong>Principle -</strong></p>
 						 			<p>It is based on the principle that on heating in presence of an alkali (sodium carbonate), reducing sugars are converted to enediols which are strong reducing agents. These then convert the cupric ions in copper sulphate to cuprous ions . An insoluble reddish precipitate of cuprous oxide Is formed and the degree of colour of the precipitate/solution is dependent on the amount of reducing sugar in the analyte.The sodium citrate in the reagent acts as a complexing agent which keeps the copper ions in solution.
 										Benedicts solution contains anhydrous sodium carbonate, sodium citrate and copper (2) sulphate pentahydrate.</p>
-						 			<p><strong>The Color change and the corresponding quantities of reducing sugar -</strong></p>
+      						</div>
+      						<div class="modal-footer">
+        						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      						</div>
+    					</div>
+ 					 </div>
+				</div>
+				<!-- Model Ends -->
+				<!-- Model Starts -->
+				<div class="modal fade " id="modal2" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  					<div class="modal-dialog modal-dialog-scrollable">
+    					<div class="modal-content">
+      						<div class="modal-header">
+        						<h5 class="modal-title" id="staticBackdropLabel">About Benedict's Test Solution</h5>
+        						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          							<span aria-hidden="true">&times;</span>
+        						</button>
+      						</div>
+      						<div class="modal-body">
+							  <p><strong>The Color change and the corresponding quantities of reducing sugar -</strong></p>
 						 			<ul>
 						  				<li>Blue - Negative </li>
 						 			 	<li>Green - 0.5 to 1gm </li>
@@ -222,27 +240,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
  					 </div>
 				</div>
 				<!-- Model Ends -->
-				<!-- Model Starts -->
-					<div id="MyPopup2" class="modal fade" role="dialog">
-						<div class="modal-dialog">
-						<!-- Modal content-->
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal">
-									&times;</button>
-									<h4 class="modal-title">
-									</h4>
-								</div>
-								<div class="modal-body">
-								</div>
-								<div class="modal-footer">
-								<button type="button" class="btn btn-danger" data-dismiss="modal">
-								Close</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				<!-- Model Ends -->
 					
 				<div class="col-md-6 h3" id="hint1"  style="font-family:arial;padding:10px;">
 					<button data-toggle="modal" data-target="#staticBackdrop" class="btn btn-primary">Click to know about Benedict's solution</button>
@@ -251,18 +248,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 					See above we have taken 5ml of Benedict's solution in test tube
 				</div>
 				<div class="col-md-6 h3" id="hint3"  style="font-family:arial;padding:10px;display:none">
-					See above we have taken 8 drops amount of urine sample in the same test tube
+					See above we are going to heat Benedict's solution to see for prior colour change which indicates contamination or substandard reagent
 				</div>
 				<div class="col-md-6 h3" id="hint4"  style="font-family:arial;padding:10px;display:none">
-					See above we have  lit flame
+					See above we have taken 8 drops amount of urine sample in the same test tube
 				</div>
 				<div class="col-md-6 h3" id="hint5"  style="font-family:arial;padding:10px;display:none">
-					See above placed test tube over flame
-				</div>
-				<div class="col-md-6 h3" id="hint6"  style="font-family:arial;padding:10px;display:none">
-					See the color of solution in test tube has changed to green which means urine sample has Traceable amount of sugar
-				</div>
-			
+					See above the tube is carefully heated over the flame
+				</div>	
 			</div>
 			
         </div>
@@ -406,7 +399,7 @@ We hope you enjoy using our Pathology V-Lab.
 				res[1]="right";
 				f2=1;
 				}
-				img.setAttribute("src","Benedict Images/5.png");
+				img.setAttribute("src","Benedict Images/6.png");
 				document.getElementById("loading").setAttribute("style","display:block");
 				d2.setAttribute("style","display:none");
 				d3.setAttribute("style","display:block");
@@ -423,71 +416,73 @@ We hope you enjoy using our Pathology V-Lab.
 				alert("Wrong Answer now We should take Benedicts reagent first - heated to see for prior colour change which indicates contamination or substandard reagent and then Add Urine Sample, Choose correct again");
 			}
 		}
-		function third()
+		function third(val)
 		{
 			img=document.getElementById("imgmain");
 			d4=document.getElementById("4");
 			d3=document.getElementById("3");
 			h4=document.getElementById("hint4");
 			h3=document.getElementById("hint3");
-			res[2]=document.getElementById("txt1").value;
-				alert("Now, We should have taken 8 drops amount of urine sample in the same test tube");
-				img.setAttribute("src","Benedict Images/6.png");
+			if(val=="a2")
+			{
+				alert("Correct Answer now we should Add 8drops of urine to Benedicts’ reagent.");
+				if(f2==0)
+				{
+				res[1]="right";
+				f2=1;
+				}
+				img.setAttribute("src","Benedict Images/5.png");
 				document.getElementById("loading").setAttribute("style","display:block");
 				d3.setAttribute("style","display:none");
 				d4.setAttribute("style","display:block");
-				h4.setAttribute("style","font-family:arial;padding:10px;display:block");
 				h3.setAttribute("style","font-family:arial;padding:10px;display:none");
+				h4.setAttribute("style","font-family:arial;padding:10px;display:block");
+			}
+			else
+			{
+			    if(f2==0)
+			    {
+			    res[1]="wrong";
+			    f2=1;
+			    }
+				alert("Wrong Answer to Add 5ml of urine to benedict’s reagent, Choose correct again");
+			}
 			
 			
 		}
-		function fourth()
+		function fourth(val)
 		{
 			img=document.getElementById("imgmain");
 			d4=document.getElementById("4");
 			d5=document.getElementById("5");
 			h4=document.getElementById("hint4");
 			h5=document.getElementById("hint5");
-			res[3]=document.getElementById("txt2").value;
-				alert("Heat the mixture carefully on spirit lamp/Bunsen burner and Wait for colour change without heating");
+			if(val=="a1")
+			{
+				alert("Correct Answer now we should Heat the solution.");
+				if(f2==0)
+				{
+				res[1]="right";
+				f2=1;
+				}
 				img.setAttribute("src","Benedict Images/7.png");
 				document.getElementById("loading").setAttribute("style","display:block");
-				d5.setAttribute("style","display:block");
 				d4.setAttribute("style","display:none");
+				d5.setAttribute("style","display:block");
 				h4.setAttribute("style","font-family:arial;padding:10px;display:none");
 				h5.setAttribute("style","font-family:arial;padding:10px;display:block");
-			
-			
-		}
-		function fifth()
-		{
-			img=document.getElementById("imgmain");
-			d6=document.getElementById("6");
-			d5=document.getElementById("5");
-			h6=document.getElementById("hint6");
-			h5=document.getElementById("hint5");
-			res[4]=document.getElementById("txt3").value;
-				alert("If you got color then Put test tube in cold water or wait for color change on heating, color of solution in test tube will be changed depeding upon the concentration of sugar in urine sample");
-				img.setAttribute("src","Benedict Images/8.png");
-				document.getElementById("loading").setAttribute("style","display:block");
-				d5.setAttribute("style","display:none");
-				d6.setAttribute("style","display:block");
-				h5.setAttribute("style","font-family:arial;padding:10px;display:none");
-				h6.setAttribute("style","font-family:arial;padding:10px;display:block");
+			}
+			else
+			{
+			    if(f2==0)
+			    {
+			    res[1]="wrong";
+			    f2=1;
+			    }
+				alert("Wrong Answer 'Wait for colour change without heating', Choose correct again");
+			}			
 		}
 	</script>
-	<script type="text/javascript">
-	$(function () {
-        $("#btnShowPopup2").click(function () {
-           
-            var body = "<img src='Benedict Images/ben2.jpg' class='img-fluid pb-4'>";
-
-            
-            $("#MyPopup2 .modal-body").html(body);
-            $("#MyPopup2").modal("show");
-        });
-    });     	
-</script>
 </body>
 
 </html>

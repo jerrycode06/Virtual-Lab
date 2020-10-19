@@ -313,6 +313,11 @@ if ($log_id == 'login') {
                     <option>Student</option>
                     <option>Teacher</option>
             </select>
+            <div class="input-field <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>" id="chcode">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Referral Code" name="code" id="refcode" />
+            <!--  <span class="help-block"><?php echo $password_err; ?></span> -->
+            </div>
             <input type="submit" class="btn" value="Sign up" />
           </form>
         </div>
@@ -348,13 +353,13 @@ if ($log_id == 'login') {
 <div class="social-panel-container">
 	<div class="social-panel">
 		<p>Created with <i class="fa fa-heart"></i> by
-		<h4>The ADC-Club,</h4>
+		<h4>The ADC-Club, Under Dr. Swaleha Zubair</h4>
 		<h4>Dept. of Computer Science, AMU</h4>
 	</div>
 </div>
 <footer class="footer">
     <h2>About Us</h2>
-    <p>The Pathology V-Lab (Virtual laboratory) has been developed by students of <strong>The Area of Dominant Coders Club</strong> under the supervision of Dr. Swaleha Zubair, Department of Computer Science, AMU for the Department of Pathology, to provide The Students of Medicine with an online platform to practice routine laboratory experiments in a simulated environment.  
+    <p>The Pathology V-Lab (Virtual laboratory) has been developed by students of <strong>The Area of Dominant Coders Club</strong> under the supervision of Dr. Hena Ansari of Deptt of Pathology JNMC, AMU for the Department of Pathology, to provide The Students of Medicine with an online platform to practice routine laboratory experiments in a simulated environment.  
 It is not a replacement for a hands-on training setup, but has the purpose to provide an enhanced learning experience with ease of access. 
 We hope you enjoy using our Pathology V-Lab.
 </p>

@@ -116,7 +116,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         </div>
         <div class="container">
             <div class="row">
-                <img onload="afterload()" src="Benedict Images/1.png" alt="image" id="imgmain" style="height:350px;width:1100px" class="img-fluid pb-4">
+                <img onload="afterload()" src="Benedict Images/1.1.png" alt="image" id="imgmain" style="height:350px;width:1100px" class="img-fluid pb-4">
 				
 				
             </div>
@@ -187,7 +187,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 						<span onclick="fifth()" class="btn btn-primary">Submit</span>
 					</div>
                     <div id="6" style="display:none" >
-                    <button id="btnShowPopup2">Click for More about result of solution</button>
+                    <button id="btnShowPopup2" class="btn btn-primary">Click for More about result of solution</button>
 						<form style="margin-top:7px" action="result.php" method="post" onsubmit="return vald()">
 						    <div id="popres">
 						    </div>
@@ -216,7 +216,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                          <li>Acetest (Rothera’s test in form of a tablet)</li>
                          <li>Reagent strip test (ketostix)</li> 
                      </ul>
-									<img src = "Benedict Images/ketone-pic.jpg"/>
       						</div>
       						<div class="modal-footer">
         						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -409,7 +408,7 @@ We hope you enjoy using our Pathology V-Lab.
 				res[1]="right";
 				f2=1;
 				}
-				img.setAttribute("src","Benedict Images/test-image4.jpg");
+				img.setAttribute("src","Benedict Images/ammonium.jpg");
 				document.getElementById("loading").setAttribute("style","display:block");
 				d2.setAttribute("style","display:none");
 				d3.setAttribute("style","display:block");
@@ -441,7 +440,7 @@ We hope you enjoy using our Pathology V-Lab.
 				res[1]="right";
 				f2=1;
 				}
-				img.setAttribute("src","Benedict Images/test-image5.jpg");
+				img.setAttribute("src","Benedict Images/sodium.jpg");
 				document.getElementById("loading").setAttribute("style","display:block");
 				d3.setAttribute("style","display:none");
 				d4.setAttribute("style","display:block");
@@ -474,7 +473,7 @@ We hope you enjoy using our Pathology V-Lab.
 				res[1]="right";
 				f2=1;
 				}
-				img.setAttribute("src","Benedict Images/test-image5.jpg");
+				img.setAttribute("src","Benedict Images/liqammonia.jpg");
 				document.getElementById("loading").setAttribute("style","display:block");
 				d4.setAttribute("style","display:none");
 				d5.setAttribute("style","display:block");

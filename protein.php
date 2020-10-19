@@ -116,7 +116,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         </div>
         <div class="container">
             <div class="row">
-                <img onload="afterload()" src="Benedict Images/1.png" alt="image" id="imgmain" style="height:350px;width:1100px" class="img-fluid pb-4">
+                <img onload="afterload()" src="Benedict Images/1.1.png" alt="image" id="imgmain" style="height:350px;width:1100px" class="img-fluid pb-4">
 				
 				
             </div>
@@ -180,7 +180,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 						</div>
 					</div>
 					<div id="5" style="display:none" >
-					<button id="btnShowPopup2">Click for More about the Solution.</button>
+					<button data-toggle="modal" data-target="#staticBackdrop2" class="btn btn-primary">Click for More about the Solution.</button>
 						<form style="margin-top:7px" action="result.php" method="post" onsubmit="return vald()">
 						    <div id="popres">
 						    </div>
@@ -203,18 +203,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 						 			<p>The Heat Coagulation or heat and acetic acid test is a simple test which detects the presence of protein, mainly albumin, in urine. It can be done on a random urine sample. It is a qualitative and semi- quantitative test as the amount of protein can be graded according to the degree of cloudiness or turbidity produced. </p>
 						 			<p><strong>Principle -</strong></p>
 						 			<p>When a sample of urine containing dissolved proteins in excess of the normal is heated, these proteins coagulate and form a precipitate which leads to haziness or cloudiness of the solution. The precipitation is further enhanced on adding acetic acid which acidifies the solution and brings the proteins closer to their isoelectric point. Metaproteins which may form and remain in solution in alkaline medium are also detected in the acidic medium. Acetic acid also serves to dissolve phosphates and carbonates in the sample, which may act as a source of false positive turbidity.</p>
-									<img src = "Benedict Images/Picture4.jpg"/>
-									<img src = "Benedict Images/Picture5.jpg"/>
-									<p>Now we have different types of precipitate so we grade the amount of protein according to it.</p>
-                    <ul>
-                        <li>No cloudiness - Negative</li>
-                        <li>Slight cloudiness visible against dark surface - 1+ (50 mg/dl)</li>
-                        <li>Granular precipitate - 2+ (50-250 mg/dl)</li>
-                        <li>Floccular precipitate - 3+ (250-500 mg/dl)</li>
-                        <li>Curdy thick clumps of precipitate - 4+ (500-1000 mg/dl)</li>
-                        <li>Distinct cloudiness - 2+</li>
-                        <li>Thick clumpy precipitate - 4+</li>
-                    </ul>
       						</div>
       						<div class="modal-footer">
         						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -224,25 +212,34 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 				</div>
 				<!-- Model Ends -->
 				<!-- Model Starts -->
-					<div id="MyPopup2" class="modal fade" role="dialog">
-						<div class="modal-dialog">
-						<!-- Modal content-->
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal">
-									&times;</button>
-									<h4 class="modal-title">
-									</h4>
-								</div>
-								<div class="modal-body">
-								</div>
-								<div class="modal-footer">
-								<button type="button" class="btn btn-danger" data-dismiss="modal">
-								Close</button>
-								</div>
-							</div>
-						</div>
-					</div>
+				<div class="modal fade" id="staticBackdrop2" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  					<div class="modal-dialog modal-dialog-scrollable">
+    					<div class="modal-content">
+      						<div class="modal-header">
+        						<h5 class="modal-title" id="staticBackdropLabel">About Heat Coagulation Test Precipitate</h5>
+        						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          							<span aria-hidden="true">&times;</span>
+        						</button>
+      						</div>
+      						<div class="modal-body">
+                    <ul>
+                        <li>No cloudiness - Negative</li>
+                        <li>Slight cloudiness visible against dark surface - 1+ (50 mg/dl)</li>
+                        <li>Granular precipitate - 2+ (50-250 mg/dl)</li>
+                        <li>Floccular precipitate - 3+ (250-500 mg/dl)</li>
+                        <li>Curdy thick clumps of precipitate - 4+ (500-1000 mg/dl)</li>
+                        <li>Distinct cloudiness - 2+</li>
+                        <li>Thick clumpy precipitate - 4+</li>
+					</ul>
+					<img src = "Benedict Images/Picture4.jpg"/>
+					<img src = "Benedict Images/Picture5.jpg"/>
+      						</div>
+      						<div class="modal-footer">
+        						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      						</div>
+    					</div>
+ 					 </div>
+				</div>
 				<!-- Model Ends -->
 					
 				<div class="col-md-6 h3" id="hint1"  style="font-family:arial;padding:10px;">

@@ -112,11 +112,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
     <section class="test">
         <div class="py-3">
-            <h1 class="text-center">Test for Bile Salts in Urine</h1>
+            <h1 class="text-center">Test for Bile Salts in Urine (Hay’s sulphur Flower Test)</h1>
         </div>
         <div class="container">
             <div class="row">
-                <img onload="afterload()" src="Benedict Images/1.png" alt="image" id="imgmain" style="height:350px;width:1100px" class="img-fluid pb-4">
+                <img onload="afterload()" src="Benedict Images/1.1.png" alt="image" id="imgmain" style="height:350px;width:1100px" class="img-fluid pb-4">
 				
 				
             </div>
@@ -170,7 +170,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 						</div>
 					</div>
                     <div id="4" style="display:none" >
-                    <button id="btnShowPopup2" onclick="fifth()">Click for More about result of solution</button>
+                    <button id="btnShowPopup2" onclick="fifth()" class="btn btn-primary">Click for More about result of solution</button>
 						<form style="margin-top:7px" action="result.php" method="post" onsubmit="return vald()">
 						    <div id="popres">
 						    </div>
@@ -184,7 +184,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   					<div class="modal-dialog modal-dialog-scrollable">
     					<div class="modal-content">
       						<div class="modal-header">
-        						<h5 class="modal-title" id="staticBackdropLabel">About Test for Bile Salts</h5>
+        						<h5 class="modal-title" id="staticBackdropLabel">About Test for Bile Salts(Hay’s Sulphur Flower test)</h5>
         						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           							<span aria-hidden="true">&times;</span>
         						</button>
@@ -194,7 +194,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 						 			<p>Bile salts are excreted in urine in increased amounts in hepatocellular and obstructive jaundice. </p>
 						 			<p><strong>Principle -</strong></p>
 						 			<p>Hay’s sulphur flower test is a qualitative test.It tests for the presence or absence of bile slats in a urine sample by the change in surface tension when sulphur granules are sprinkled over the surface of the sample. Bile salts lower the surface tension of the urine even in small concentrations.</p>
-									<img src = "Benedict Images/bile-salt.jpg"/>
       						</div>
       						<div class="modal-footer">
         						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -226,7 +225,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 				<!-- Model Ends -->
 					
 				<div class="col-md-6 h3" id="hint1"  style="font-family:arial;padding:10px;">
-					<button data-toggle="modal" data-target="#staticBackdrop" class="btn btn-primary">Click to know about Rothera’s Test</button>
+					<button data-toggle="modal" data-target="#staticBackdrop" class="btn btn-primary">Click to know about Hay’s Sulphur Flower test</button>
 				</div>
 				<div class="col-md-6 h3" id="hint2"  style="font-family:arial;padding:10px;display:none">
 					See above we have taken 5ml urine in a tube. 
@@ -385,7 +384,7 @@ We hope you enjoy using our Pathology V-Lab.
 				res[1]="right";
 				f2=1;
 				}
-				img.setAttribute("src","Benedict Images/test-image4.jpg");
+				img.setAttribute("src","Benedict Images/sulphur.jpg");
 				document.getElementById("loading").setAttribute("style","display:block");
 				d2.setAttribute("style","display:none");
 				d3.setAttribute("style","display:block");

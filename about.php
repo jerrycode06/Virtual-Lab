@@ -39,7 +39,7 @@
     </nav>
     <section id="home">
         <h1>About Virtual Lab</h1>			
-	<h3 style="color: #fff;">The Pathology E lab has been developed to provide MBBS students with an online platform to practice   routine laboratory experiments in a simulated environment.  Although it is not a repacement for hands -on training, the purpose is to provide an enhanced learning experience with ease of access. We hope you enjoy using the Pathology E -lab.</h3>
+	<h3 style="color: #fff;">The Pathology E lab has been developed to provide MBBS students with an online platform to practice routine laboratory experiments in a simulated environment.  Although it is not a replacement for hands -on training, the purpose is to provide an enhanced learning experience with ease of access. We hope you enjoy using the Pathology E -lab.</h3>
     </section>
 </body>
 
