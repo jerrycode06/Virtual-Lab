@@ -41,6 +41,13 @@
         <h1>About Virtual Lab</h1>			
 	<h3 style="color: #fff;">The Pathology E lab has been developed to provide MBBS students with an online platform to practice routine laboratory experiments in a simulated environment.  Although it is not a replacement for hands -on training, the purpose is to provide an enhanced learning experience with ease of access. We hope you enjoy using the Pathology E -lab.</h3>
     </section>
+    <footer class="footer">
+    <h2>About Us</h2>
+    <p>The Pathology V-Lab (Virtual laboratory) has been developed by students of <strong>The Area of Dominant Coders Club</strong> under the supervision of Dr. Hena Ansari of Department of Pathology JNMC, AMU for the Department of Pathology, to provide The Students of Medicine with an online platform to practice routine laboratory experiments in a simulated environment.  
+It is not a replacement for a hands-on training setup, but has the purpose to provide an enhanced learning experience with ease of access. 
+We hope you enjoy using our Pathology V-Lab.
+</p>
+</footer>
 </body>
 
 </html>

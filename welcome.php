@@ -154,7 +154,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 						<label>Next step (2) ?</label>
 						<select  onchange="second(this.value)" class="form-control">
 							<option>Select Answer</option>
-							<option value="a1">Add Urine Sample first and then Benedicts Reagent is heated to see for priot colour change which indicates contamination or substandard reagent.</option>
+							<option value="a1">Add Urine Sample.</option>
 							<option value="a2">Benedicts reagent is first heated to see for prior colour change which indicates contamination or substandard reagent and then Add Urine Sample.</option>
 						</select>
 						</div>
@@ -314,13 +314,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             </div>
         </div>
     </section>
-    <footer class="footer">
-    <h2>About Us</h2>
-    <p>The Pathology V-Lab (Virtual laboratory) has been developed by students of <strong>The Area of Dominant Coders Club</strong> under the supervision of Dr. Swaleha Zubair, Department of Computer Science, AMU for the Department of Pathology, to provide The Students of Medicine with an online platform to practice routine laboratory experiments in a simulated environment.  
-It is not a replacement for a hands-on training setup, but has the purpose to provide an enhanced learning experience with ease of access. 
-We hope you enjoy using our Pathology V-Lab.
-</p>
-</footer>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootsrap.bundle.min.js"></script>
